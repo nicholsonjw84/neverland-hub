@@ -1399,10 +1399,12 @@ svg.leaflet-image-layer.leaflet-interactive path {
   display: flex;
   gap: 8px;
   overflow-x: auto;
+  overflow-y: hidden;
   padding: 10px 4px;
   margin-top: 4px;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: thin;
+  touch-action: pan-x;
 }
 
 .hubroot .fp-stop {
@@ -2192,7 +2194,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
     <div class="quicknav">
       <a href="#g-room">Room</a><a href="#g-location">Location</a><a href="#g-dining">Dining</a><a href="#g-beach">Beach</a>
       <a href="#g-around">Getting Around</a><a href="#g-excursions">Excursions</a><a href="#g-towels">Towels</a><a href="#g-slides">Slides</a><a href="#g-fairground">Fairground</a>
-      <a href="#g-consensus">Guest Tips</a><a href="#g-scale">Size Comparison</a><a href="#g-money">Money</a><a href="#g-extra">Extras</a>
+      <a href="#g-consensus">Guest Tips</a><a href="#g-scale">Size Comparison</a><a href="#g-money">Money</a><a href="#g-extra">Extras</a><a href="#g-airport">Airport</a>
     </div>
   </section>
 
@@ -2420,6 +2422,29 @@ svg.leaflet-image-layer.leaflet-interactive path {
       <p><b>junglepark_res@pickalbatros.com</b> — the main contact address listed on their own site.<br>
       <b>junglepark_fo@pickalbatros.com</b> — front office, the one they specifically point to for transport/transfer questions.<br>
       <b>Phone:</b> +20-65-346 4670, or the general hotline (+202) 15787.</p>
+    </div>
+  </section>
+
+  <section id="g-airport">
+    <span class="tag">Hurghada Airport</span>
+    <h2>🛬 What to actually expect, both ways</h2>
+    <p style="color:var(--sand-dim); margin-top:6px;">Genuinely two different experiences — arrival is short and simple, departure has more layers. Worth knowing both before you land.</p>
+
+    <div class="card" style="margin-top:14px;">
+      <h3>Landing (approx. 7:15pm arrival)</h3>
+      <p>No jet bridge — you'll walk down aircraft stairs onto the tarmac, then a short bus (about 100 yards) into the terminal. If you don't already have an e-visa, look for the <b>bank kiosks</b> just inside the arrivals hall, before passport control — $25 USD cash per person (or GBP/EUR, but change comes back in EGP at a worse rate), no paperwork, seconds to complete. Ignore anyone who isn't at the actual bank counter offering to "fast-track" it for extra money.</p>
+      <p style="margin-top:8px;">The visa itself is quick — it's the immigration queue behind it that varies. Realistically <b>20 minutes on a quiet day, up to 90 minutes</b> if several flights land close together. Once through baggage claim, you walk straight out into the same arrivals hall where your easyJet holidays rep will be standing with a sign — no separate building or extra walk to find.</p>
+    </div>
+
+    <div class="card" style="margin-top:12px;">
+      <h3>Flying home</h3>
+      <p>Aim to be at the airport <b>3 hours before</b> your flight. The layers: a passport/bag check just to enter the building → check-in at the easyJet desks (Terminal 1) → immigration (5–20 min) → the <b>main security screening</b>, which is the real bottleneck and can run 45 minutes to an hour. Liquids rules are stricter than UK airports — pack anything precious in the hold, not hand luggage, for this leg. Occasionally there's a further passport check right at the gate too, so don't fully switch off once you're through.</p>
+    </div>
+
+    <div class="card" style="margin-top:12px;">
+      <h3>Food &amp; water — and the one trick worth using</h3>
+      <p>Food inside is limited (Burger King, a couple of cafés/sandwich shops) and noticeably pricier than town — family reports of £9–18 for a basic burger meal aren't unusual. Worth eating at the resort beforehand, or asking reception for a packed lunch to take with you.</p>
+      <p style="margin-top:8px;">Water specifically: you can't carry full bottles through security, so it has to be bought airside, and prices/quality vary a lot between stalls — a few reviewers report being overcharged via a currency-conversion trick, so check the total before paying. <b>The trick people mention:</b> carry empty bottles through security, then refill for free at the water fountains airside. Can't confirm the fountain water agrees with everyone's stomach though, so for the kids, buying sealed bottled water once you're through is the safer default — just budget for it rather than being caught out.</p>
     </div>
   </section>
 
@@ -3791,7 +3816,10 @@ function updateFlightPathSvg(s) {
       chip.classList.toggle('passed', chipT < activeCity.t);
     });
     const activeChip = stripEl.querySelector('.active');
-    if (activeChip) activeChip.scrollIntoView({ behavior:'smooth', inline:'center', block:'nearest' });
+    if (activeChip) {
+      const targetLeft = activeChip.offsetLeft - (stripEl.clientWidth/2) + (activeChip.clientWidth/2);
+      stripEl.scrollTo({ left: targetLeft, behavior: 'smooth' });
+    }
   }
   } catch(e) { /* fail silently - the progress bar above already shows flight status */ }
 }
