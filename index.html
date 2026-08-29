@@ -73,15 +73,15 @@
   tr:last-child td{ border-bottom:none; }
   tr:nth-child(even) td{ background:rgba(246,238,221,0.03); }
 
-  .boardingpass{ display:grid; grid-template-columns:1fr auto 1fr; border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; margin-top:14px; background:var(--surface); }
-  .bp-side{ padding:16px 18px; }
-  .bp-mid{ display:flex; flex-direction:column; align-items:center; justify-content:center; padding:12px 8px; border-left:1px dashed var(--line); border-right:1px dashed var(--line); background:var(--bg-deep); }
-  .bp-code{ font-family:Georgia,serif; font-size:24px; font-weight:800; color:var(--sand); }
-  .bp-place{ font-size:12px; color:var(--sand-dim); }
-  .bp-time{ font-size:19px; font-weight:700; color:var(--gold); margin-top:5px; }
-  .bp-date{ font-size:11.5px; color:var(--sand-dim); }
-  .bp-flightno{ font-size:11px; color:var(--sand-dim); text-align:center; }
-  @media (max-width:600px){ .boardingpass{ grid-template-columns:1fr; } .bp-mid{ border-left:none; border-right:none; border-top:1px dashed var(--line); border-bottom:1px dashed var(--line); flex-direction:row; gap:10px; } }
+  .boardingpass{ display:grid; grid-template-columns:1fr auto 1fr; border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; margin-top:10px; background:var(--surface); }
+  .bp-side{ padding:9px 12px; }
+  .bp-mid{ display:flex; flex-direction:column; align-items:center; justify-content:center; padding:7px 6px; border-left:1px dashed var(--line); border-right:1px dashed var(--line); background:var(--bg-deep); }
+  .bp-code{ font-family:Georgia,serif; font-size:16px; font-weight:800; color:var(--sand); }
+  .bp-place{ font-size:9.5px; color:var(--sand-dim); }
+  .bp-time{ font-size:13.5px; font-weight:700; color:var(--gold); margin-top:2px; }
+  .bp-date{ font-size:9px; color:var(--sand-dim); }
+  .bp-flightno{ font-size:9px; color:var(--sand-dim); text-align:center; }
+  @media (max-width:600px){ .boardingpass{ grid-template-columns:1fr; } .bp-mid{ border-left:none; border-right:none; border-top:1px dashed var(--line); border-bottom:1px dashed var(--line); flex-direction:row; gap:8px; } }
 
   .dial{ margin-top:16px; display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
   .dial-zone{ border-radius:var(--radius); padding:14px; border:1px solid var(--line); }
@@ -2172,7 +2172,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
     <h3 style="margin-top:20px; font-size:15px; color:var(--gold);">✈️ Outbound — Wed 2 Sept 2026</h3>
     <div class="boardingpass">
       <div class="bp-side"><div class="bp-place">Belfast International</div><div class="bp-code">BFS</div><div class="bp-time">11:15</div><div class="bp-date">Wed 2 Sept 2026</div></div>
-      <div class="bp-mid"><div style="font-size:20px;color:var(--gold);">✈</div><div class="bp-flightno">easyJet<br>EZY3077</div></div>
+      <div class="bp-mid"><div style="font-size:15px;color:var(--gold);">✈</div><div class="bp-flightno">easyJet<br>EZY3077</div></div>
       <div class="bp-side" style="text-align:right;"><div class="bp-place">Hurghada</div><div class="bp-code">HRG</div><div class="bp-time">19:15</div><div class="bp-date">Wed 2 Sept 2026</div></div>
     </div>
     <p class="note">Seats: 26F, 26C, 26D, 26E</p>
@@ -2180,7 +2180,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
     <h3 style="margin-top:20px; font-size:15px; color:var(--gold);">✈️ Return — Wed 16 → Thu 17 Sept 2026</h3>
     <div class="boardingpass">
       <div class="bp-side"><div class="bp-place">Hurghada</div><div class="bp-code">HRG</div><div class="bp-time">20:20</div><div class="bp-date">Wed 16 Sept 2026</div></div>
-      <div class="bp-mid"><div style="font-size:20px;color:var(--gold);">✈</div><div class="bp-flightno">easyJet<br>EZY3078</div></div>
+      <div class="bp-mid"><div style="font-size:15px;color:var(--gold);">✈</div><div class="bp-flightno">easyJet<br>EZY3078</div></div>
       <div class="bp-side" style="text-align:right;"><div class="bp-place">Belfast International</div><div class="bp-code">BFS</div><div class="bp-time">00:45</div><div class="bp-date">Thu 17 Sept 2026</div></div>
     </div>
     <p class="note">Seats: 19F, 19C, 19D, 19E — lands just after midnight, technically the 17th.</p>
@@ -2220,7 +2220,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   <section id="g-dining">
     <span class="tag">Restaurants & bars</span>
     <h2>🍽️ Where and when to eat and drink</h2>
-    <p style="color:var(--sand-dim); margin-top:6px;">Ten-plus restaurants, 12 bars. Under "Dine Around" you can eat at any of the three merged sub-resorts (Jungle Aqua Park, Water Valley, Alf Leila Wa Leila).</p>
+    <p style="color:var(--sand-dim); margin-top:6px;">All 12 restaurants at your own hotel, Jungle Aqua Park, plus 12 bars. Under "Dine Around" you can eat at any of the three merged sub-resorts (Jungle Aqua Park, Water Valley, Alf Leila Wa Leila).</p>
     <div class="tbl-scroll">
       <table>
         <thead><tr><th>Restaurant</th><th>Cuisine</th><th>Breakfast</th><th>Lunch</th><th>Dinner</th></tr></thead>
@@ -2231,9 +2231,12 @@ svg.leaflet-image-layer.leaflet-interactive path {
           <tr><td><a href="https://www.pickalbatros.com/jungle-aqua-park-resort-neverland-hurghada/restaurants-bars/zum-kaiser" target="_blank" rel="noopener">German restaurant</a></td><td>German</td><td>07:00–10:00</td><td>12:30–14:30</td><td>18:30–21:00</td></tr>
           <tr><td><a href="https://www.pickalbatros.com/jungle-aqua-park-resort-neverland-hurghada/restaurants-bars/alfredo" target="_blank" rel="noopener">Alfredo's</a></td><td>Italian</td><td>07:00–10:00</td><td>12:30–14:30</td><td>18:30–21:00</td></tr>
           <tr><td><a href="https://www.pickalbatros.com/jungle-aqua-park-resort-neverland-hurghada/restaurants-bars/le-marche-restaurant" target="_blank" rel="noopener">Le Marche</a></td><td>Seafood</td><td>07:00–10:00</td><td>12:30–14:30</td><td>18:30–21:00</td></tr>
-          <tr><td><a href="https://www.pickalbatros.com/jungle-aqua-park-resort-neverland-hurghada/restaurants-bars/la-casa" target="_blank" rel="noopener">La Casa</a> / <a href="https://www.pickalbatros.com/jungle-aqua-park-resort-neverland-hurghada/restaurants-bars/soprano" target="_blank" rel="noopener">Soprano</a></td><td>Italian (pizza/pasta)</td><td>—</td><td>—</td><td>Evenings</td></tr>
+          <tr><td><a href="https://www.pickalbatros.com/jungle-aqua-park-resort-neverland-hurghada/restaurants-bars/la-casa" target="_blank" rel="noopener">La Casa</a></td><td>Italian (wood-fired pizza)</td><td>—</td><td>—</td><td>Evenings</td></tr>
+          <tr><td><a href="https://www.pickalbatros.com/jungle-aqua-park-resort-neverland-hurghada/restaurants-bars/soprano" target="_blank" rel="noopener">Soprano</a></td><td>Italian (pizza/pasta buffet)</td><td>—</td><td>—</td><td>Evenings</td></tr>
           <tr><td><a href="https://www.pickalbatros.com/jungle-aqua-park-resort-neverland-hurghada/restaurants-bars/rocking-burger" target="_blank" rel="noopener">Rocking Burger</a></td><td>Burgers</td><td>—</td><td>Daytime</td><td>Evenings</td></tr>
-          <tr><td>Aqua Park Restaurant</td><td>Pizza, pasta, snacks</td><td>—</td><td>Daytime</td><td>—</td></tr>
+          <tr><td><a href="https://www.pickalbatros.com/jungle-aqua-park-resort-neverland-hurghada/restaurants-bars/taj" target="_blank" rel="noopener">Taj</a></td><td>Indian</td><td>—</td><td>—</td><td>Evenings</td></tr>
+          <tr><td><a href="https://www.pickalbatros.com/jungle-aqua-park-resort-neverland-hurghada/restaurants-bars/the-starfish-restaurant" target="_blank" rel="noopener">The Starfish Restaurant</a></td><td>Seafood (à la carte)</td><td>—</td><td>—</td><td>Evenings</td></tr>
+          <tr><td><a href="https://www.pickalbatros.com/jungle-aqua-park-resort-neverland-hurghada/restaurants-bars/club-mc-restaurant" target="_blank" rel="noopener">Club MC Restaurant</a></td><td>Snacks / light bites</td><td>—</td><td>Daytime</td><td>—</td></tr>
         </tbody>
       </table>
     </div>
@@ -2456,9 +2459,6 @@ svg.leaflet-image-layer.leaflet-interactive path {
     <span class="tag">Route planner — real map, real GPS</span>
     <h2>🗺️ Tap "Locate Me," then tap where you're headed</h2>
     <p style="color:var(--sand-dim); margin-top:8px;">The actual resort map underneath, 78 real points on top. Pinch, scroll, or use the +/− buttons to zoom in — everything's clickable at any zoom level. Fully offline once saved, except the GPS lookup itself.</p>
-    <div class="callout">
-      <b>Honest label:</b> positions are read off the official map and cross-checked against the resort's verified location, but the map is drawn in isometric perspective, not a straight top-down survey — "Locate Me" gets you to the right corner of the resort, not a guaranteed exact spot. Walking times are computed from real relative distances between points.
-    </div>
 
     <div class="mappanel">
       <div class="controls">
@@ -2509,8 +2509,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
   <section style="border-bottom:none;">
     <span class="tag">Reference table</span>
-    <h2>⏱️ Walking times from every room block</h2>
-    <p style="color:var(--sand-dim); margin-top:6px;">Computed from the same real-position graph above — pick a block, see minutes to the main landmarks.</p>
+    <h2>⏱️ Walking times from your hotel's room blocks</h2>
+    <p style="color:var(--sand-dim); margin-top:6px;">Just the 8 blocks on your side of the complex (A–F, N &amp; O) — Alf Leila Wa Leila's blocks and reception are left out since they're a separate hotel. Computed from the same real-position graph above.</p>
     <div id="distanceTableWrap"></div>
   </section>
 </div>
@@ -2540,8 +2540,8 @@ const NODES = {
   p15: {label:'Towel Box', cat:'practical', kind:'leaf', x:1037.0, y:273.1, lat:27.089067, lon:33.826259},
   p16n: {label:'Kids Club / Playground (North)', cat:'kids', kind:'leaf', x:766.14, y:170.49, lat:27.089323, lon:33.825553},
   p16s: {label:'Kids Club / Playground (South)', cat:'kids', kind:'leaf', x:1385.25, y:710.9, lat:27.087975, lon:33.827167},
-  p17n: {label:'Aqua Park (North Zone)', cat:'play', kind:'hub', x:1249.82, y:238.9, lat:27.089152, lon:33.826814},
-  p17s: {label:'Aqua Park (South Zone)', cat:'play', kind:'hub', x:1385.25, y:669.86, lat:27.088077, lon:33.827167},
+  p17n: {label:'Aqua Park (Kids/Family)', cat:'play', kind:'hub', x:1249.82, y:238.9, lat:27.089152, lon:33.826814},
+  p17s: {label:'Aqua Park (Adults/Big Slides)', cat:'play', kind:'hub', x:1385.25, y:669.86, lat:27.088077, lon:33.827167},
   p18: {label:'Water Valley Bar', cat:'bar', kind:'leaf', x:1414.27, y:457.8, lat:27.088606, lon:33.827243},
   p19: {label:'Pharmacy', cat:'practical', kind:'leaf', x:1346.56, y:177.33, lat:27.089306, lon:33.827066},
   p20: {label:'Clinic', cat:'practical', kind:'leaf', x:1385.25, y:170.49, lat:27.089323, lon:33.827167},
@@ -3117,10 +3117,11 @@ function locateMe(){
 
 /* ---------- DISTANCE TABLE ---------- */
 function renderDistanceTable(){
-  const blocks = ['bA','bB','bC','bD','bE','bF','bG','bH','bI','bJ','bK','bL','bM','bN','bO','bP','bQ','bR','bS','bT'];
-  const landmarks = ['p1','p31','p17n','p17s','p26','p41','p30','p13','p19'];
+  const blocks = ['bA','bB','bC','bD','bE','bF','bN','bO'];
+  const landmarks = ['p1','p17n','p17s','p26','p41','p30','p13','p19'];
+  const headerOverride = { p17n:'Aqua Park (Kids)', p17s:'Aqua Park (Big Slides)' };
   let html = '<div class="tbl-scroll"><table><thead><tr><th>Block</th>';
-  landmarks.forEach(l => html += '<th>'+NODES[l].label.replace(/ \(.*?\)/,'')+'</th>');
+  landmarks.forEach(l => html += '<th>'+(headerOverride[l] || NODES[l].label.replace(/ \(.*?\)/,''))+'</th>');
   html += '</tr></thead><tbody>';
   blocks.forEach(b => {
     html += '<tr><td><b>'+NODES[b].label.replace('Block ','')+'</b></td>';
